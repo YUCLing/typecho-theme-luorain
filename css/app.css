@@ -1,0 +1,335 @@
+@font-face {
+    font-family: 'handwrite';
+	src: url('https://files.penguin-logistics.cn/fonts/handwrite.woff2') format('woff2'),
+	     url('https://files.penguin-logistics.cn/fonts/handwrite.woff') format('woff');
+    font-weight: normal;
+	font-style: normal;
+}
+body {
+    position: relative;
+    background-image: url(https://files.luotianyi.me/index.php/apps/files_sharing/publicpreview/imCZRe2qmzy8aqH?fileId=580&file=/background.jpg&x=1536&y=864&a=true);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.mdui-container {
+    flex: 1;
+    padding-top: 120px;
+    max-width: 900px;
+}
+#header {
+    margin-bottom: 20px;
+    padding: 0;
+}
+#search-field {
+    height: 36px;
+    border-radius: 18px;
+    background: rgb(224, 224, 224, 0.8);
+    backdrop-filter: blur(2px);
+    padding: 0;
+    transition: all .3s linear;
+}
+#search-field.mdui-textfield-expanded {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#post-list .post {
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+#post-list .post .mdui-card-header {
+    cursor: pointer;
+}
+#post-list .post .mdui-card-primary-title {
+    cursor: pointer;
+}
+#post-list .post .mdui-card-media img {
+    max-height: 30vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 100px;
+    width: auto;
+}
+.post .mdui-card-primary-subtitle a {
+    color: #5b5b5b;
+}
+.post .mdui-card-primary-subtitle a:hover {
+    color: #343434;
+}
+.post .mdui-card-primary-subtitle a:active {
+    color: black;
+}
+.post-footer {
+    margin: 14px 0;
+}
+.page-title h1 {
+    color: #6cf;
+}
+.page-navigator {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    padding: 0;
+    list-style: none;
+    transform: translate(-50%);
+}
+.page-navigator li {
+    cursor: pointer;
+    border-radius: 13px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    margin: 3px;
+    padding: 5px;
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+    transition: all .3s linear;
+}
+.page-navigator li:hover {
+    background-color: white;
+}
+.page-navigator li a {
+    text-decoration: none;
+    color: black;
+}
+.page-navigator li.current {
+    pointer-events: none;
+}
+.page-navigator li.current a {
+    color: #6cf;
+}
+.page-navigator li.next,
+.page-navigator li.prev {
+    width: auto;
+}
+#comments {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: none;
+}
+.comment-list {
+    padding: 0;
+    list-style: none;
+}
+.comment > .mdui-card-header > .mdui-card-header-title.badge {
+    margin-top: -5px;
+}
+.post-near {
+    margin-top: 5px;
+}
+.post-near .mdui-chip {
+    background-color: rgba(224, 224, 224, 0.8);
+    backdrop-filter: blur(2px);
+}
+.post-near a {
+    color: black;
+    text-decoration: none;
+}
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+}
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+.sidebar-toggle i {
+    color: white;
+}
+#sidebar img {
+    max-width: 100%;
+}
+#back-to-top {
+    z-index: 1;
+    position: fixed;
+    right: 10px;
+    opacity: 0;
+    display: none;
+    bottom: 20px;
+    transform: translate(0, -50%);
+    transition: opacity .3s ease-in;
+}
+#back-to-top.docked {
+    position: absolute;
+}
+#back-to-top i {
+    color: white;
+}
+#textarea {
+    background: url(https://files.luotianyi.me/index.php/apps/files_sharing/publicpreview/imCZRe2qmzy8aqH?fileId=601&file=/comment.png&x=1536&y=864&a=true) right bottom no-repeat;
+    background-size: auto 80%;
+}
+#vultr {
+    height: 32px;
+    cursor: pointer;
+}
+.mdui-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+}
+.content-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: none;
+}
+.content-card .mdui-card-content img {
+    max-width: 100%;
+    max-height: 100vh;
+}
+.lyric > * {
+    font-family: 'handwrite'!important;
+}
+.pjax-anim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 8;
+    transition: all .3s ease-in-out;
+}
+.loading-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: rotateZ(45deg) translate(-50%, -50%);
+            transform: rotateZ(45deg) translate(-50%, -50%);
+}
+.loading-cube > div {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.loading-cube > div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6cf;
+    -webkit-animation: cubeAngle 2.4s infinite linear both;
+            animation: cubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+}
+.loading-cube .cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+}
+.loading-cube .cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+}
+.loading-cube .cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+}
+.loading-cube .cube2:before {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+}
+.loading-cube .cube3:before {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; 
+}
+.loading-cube .cube4:before {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+}
+@-webkit-keyframes cubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+                transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+                transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+                transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    } 
+}  
+@keyframes cubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+                transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+                transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+                transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+code {
+    font-family: Consolas;
+    background-color: #e0e0e0;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+blockquote {
+    border-left: 5px #6cf solid;
+    padding-left: 10px;
+}
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding-right: 5px;
+}
+.hljs-ln td {
+    padding: 0 5px!important;
+}
+div.player,div.progressbar {
+    z-index: 9;
+}
+::selection {
+    background: #6cf; 
+    color: white;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: rgb(61, 128, 161);
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #6cf;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(62, 174, 230);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(42, 146, 199);
+}
