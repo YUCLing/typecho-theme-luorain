@@ -6,3 +6,10 @@ Currently there's no way to customize theme through Typecho settings, but you ca
 This theme does not completely reproduce the functions of [typecho-theme-material](https://github.com/idawnlight/typecho-theme-material), because I made it for my demand.
 
 You can perfect it by submitting Pull Requests if you want.
+
+## Feature
+- AJAX supported
+- Including Pangu
+- Code Highlighting
+- Mobile device adaptation
+- Smooth scroll
